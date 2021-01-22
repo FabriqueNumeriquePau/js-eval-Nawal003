@@ -51,8 +51,8 @@ for (let i = 0; i < arrows.length; i++) {
 
 // //Étape 3
 
-let navBar = document.getElementsByTagName('nav')
-let footer = document.getElementsByTagName('footer');
+let navBar = document.querySelector('nav')
+let footer = document.querySelector('footer');
 
 // class Header {
 //     principal;
@@ -112,9 +112,9 @@ class Principal {
         const li = document.createElement('li');
         const name = document.createElement('a');
         name.textContent = this.nom;
-        const lien = document.createElement('href');
+        name.href = this.lien;
 
-        name.appendChild(lien);
+    
         li.appendChild(name);
         ul.appendChild(li);
         return ul
@@ -134,9 +134,17 @@ async function load() {
     // for (const key of Object.keys(json)) {
     //     console.log(key, json[key]);
     // }
+    
 
-    Object.entries(json).forEach(
-        ([key, value]) => { new Principal(key.nom, value.nom)}
-    );
+    // Object.entries(json).forEach(
+    //     ([key, value]) => { new Principal(key.nom, value.nom)}
+    // );
+    json.principal.forEach(element =>{
+        let nav = new Principal(element.nom, element.lien);
+        navBar.appendChild(nav.balisesHtml());
+    });
+
+
+    
 };
 load();
