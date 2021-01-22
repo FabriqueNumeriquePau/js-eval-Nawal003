@@ -51,7 +51,7 @@ for (let i = 0; i < arrows.length; i++) {
 
 // //Étape 3
 
-let navBar = document.querySelector('nav')
+let navBar = document.querySelector('nav');
 let footer = document.querySelector('footer');
 
 // class Header {
@@ -145,6 +145,6 @@ async function load() {
     });
 
 
-    
+
 };
 load();
