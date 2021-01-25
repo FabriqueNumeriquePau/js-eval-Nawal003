@@ -102,14 +102,10 @@ async function load(){
     let list = document.querySelectorAll('a');
    
     let list1 = list[1];
-    console.log(list);
     list1.addEventListener('click', ()=>{
-        div.classList.replace('hidden', 'visible')
+        div.classList.toggle('hidden')
        
     });
- 
-  
-  
     data.pied.forEach(el => {
         let footer = new Menu(el.nom, el.lien);
         footEr.appendChild(footer.create());
