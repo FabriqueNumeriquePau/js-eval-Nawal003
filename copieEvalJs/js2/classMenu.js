@@ -15,18 +15,18 @@ class Menu{
         
         return name;
     }
-    createSsMenus(){
-        const name = document.createElement('a');
-        name.textContent = this.nom;
-        name.href = this.lien;
+    // createSsMenus(){
+    //     const name = document.createElement('a');
+    //     name.textContent = this.nom;
+    //     name.href = this.lien;
        
 
         
         
 
-        return name;
+    //     return name;
         
-    }
+    // }
 }
 
 export default Menu;
